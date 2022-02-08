@@ -14,7 +14,7 @@ export default function Actionbank() {
   };
 
   return (
-    <div className="cointainer">
+    <div className="cont">
       <br />
       <div>hello user</div>
       <br />

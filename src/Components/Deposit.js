@@ -25,7 +25,7 @@ export default function Deposit({ setOpen }) {
 
   const dispatch = useDispatch();
   return (
-    <Box>
+    <div className="cont">
       <br />
       <div> Deposit Form </div>
       <br />
@@ -64,6 +64,6 @@ export default function Deposit({ setOpen }) {
   
         </Form>
       </Formik> */}
-    </Box>
+    </div>
   );
 }

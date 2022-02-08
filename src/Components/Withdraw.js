@@ -11,7 +11,7 @@ export default function Withdraw( {setOpen }) {
     setwit(parseFloat(e.target.value));
   };
   return (
-    <div>
+    <div className="cont">
       <br />
       <div> Withdraw Form </div>
       <br />

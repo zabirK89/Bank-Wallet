@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 export default function Statement() {
   const account = useSelector((state) => state.account);
   return (
-    <>
+<div className="cont"> 
       <h1>Account Statement</h1>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -49,6 +49,6 @@ export default function Statement() {
           <Button color="secondary">WITHDRAW</Button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

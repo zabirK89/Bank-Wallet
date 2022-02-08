@@ -8,7 +8,7 @@ export default function Navbar() {
     <AppBar position="static">
       <Toolbar variant="dense">
         <Typography variant="h6" color="inherit" component="div">
-          <div>
+          <div className="nav">
             <Link to="/">
               <AccountBalanceIcon
                 style={{ color: 'white' }}
