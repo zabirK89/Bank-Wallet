@@ -9,10 +9,7 @@ export default function Withdraw() {
   const [wit, setwit] = useState(0);
     const dispatch=useDispatch()
     const val = (e) => {
-
       setwit(parseFloat(e.target.value))
-    
-  
     }
   return  (
 <div>
