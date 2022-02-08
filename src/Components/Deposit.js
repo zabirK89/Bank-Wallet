@@ -1,0 +1,27 @@
+
+import React from 'react'
+
+import {TextField,Button} from "@material-ui/core"
+import { Outlet, Link } from "react-router-dom";
+
+export default function Deposit() {
+    
+  return  (
+<div>
+
+<div> Deposit Form </div>
+<br/>
+<div>
+<TextField label="Filled success" variant="filled" color="" focused />
+</div>
+<br/>
+<Link to="/">
+<Button variant="contained"  style={{backgroundColor:"blue",color:"white"}}>
+Deposit
+</Button>
+</Link>
+  </div>
+ 
+  
+    );
+}
