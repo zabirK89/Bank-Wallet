@@ -1,12 +1,11 @@
-
-import React from 'react'
+import React from "react"
 export default function Statement() {
     
   return  (
-<div>
 
-  Statement</div>
- 
+ <div>
+   Statement
+   </div>
   
     );
 }

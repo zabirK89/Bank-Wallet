@@ -3,7 +3,7 @@ import React from 'react'
 
 import {TextField,Button} from "@material-ui/core"
 import { Outlet, Link } from "react-router-dom";
-
+import {Fromik,Form,Field} from "formik"
 export default function Deposit() {
     
   return  (
@@ -12,7 +12,12 @@ export default function Deposit() {
 <div> Deposit Form </div>
 <br/>
 <div>
+
+  <Formik>
+    <Form>
 <TextField label="Filled success" variant="filled" color="" focused />
+</Form>
+</Formik>
 </div>
 <br/>
 <Link to="/">

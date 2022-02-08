@@ -5,8 +5,11 @@ import { Outlet, Link } from "react-router-dom";
 export default function Actionbank() {
  return ( 
   <div className="cointainer"> 
+  <br/>
     <div>hello user</div>
+    <br/>
     <div> Your balance is 5000</div>
+    <br/>
     <div className="btn">
 
 <Link to="/statement">
