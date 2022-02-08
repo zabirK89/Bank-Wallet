@@ -1,11 +1,8 @@
-import { combineReducers } from "redux";
-import Amountreducer from "./Amountreducer";
+import { combineReducers } from 'redux';
+import Amountreducer from './Amountreducer';
 
+const reducers = combineReducers({
+  account: Amountreducer,
+});
 
-
-const reducers=combineReducers({
-    amount :Amountreducer,
- 
-})
-
-export default reducers
+export default reducers;

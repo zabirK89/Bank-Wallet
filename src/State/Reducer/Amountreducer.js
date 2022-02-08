@@ -1,14 +1,29 @@
-const reducer=(State=5000,action)=>{
+let init = {
+  amount: 5000,
+  transactions: [],
+};
 
-  if(action.type==="deposite"){
-      return State+action.payload
-  }else if(action.type==="withdraw"){
-      console.log("Action = ",action);
-      return State-action.payload;
+const reducer = (State = init, action) => {
+  if (action.type === 'deposit') {
+    let obj = {
+      amount: action.payload,
+      type: 'deposit',
+    };
+    return {
+      amount: State.amount + action.payload,
+      transactions: [...State.transactions, obj],
+    };
+  } else if (action.type === 'withdraw') {
+    let obj = {
+      amount: action.payload,
+      type: 'withdraw',
+    };
+    return {
+      amount: State.amount - action.payload,
+      transactions: [...State.transactions, obj],
+    };
+  } else {
+    return State;
   }
-  else{
-      return State;
-  }
-  
-  }
-  export default reducer
+};
+export default reducer;

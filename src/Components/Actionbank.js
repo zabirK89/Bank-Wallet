@@ -4,13 +4,13 @@ import {Button } from "@material-ui/core"
 import { Outlet, Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 export default function Actionbank() {
-  const amount=useSelector(state=>state.amount);
+  const account=useSelector(state=>state.account);
  return ( 
   <div className="cointainer"> 
   <br/>
     <div>hello user</div>
     <br/>
-    <div> Your balance is {amount}</div>
+    <div> Your balance is {account.amount}</div>
     <br/>
     <div className="btn">
 
