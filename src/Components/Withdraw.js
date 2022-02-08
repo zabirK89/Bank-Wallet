@@ -20,7 +20,7 @@ export default function Withdraw() {
 <div> Withdraw Form </div>
 <br/>
 <div>
-<TextField label="Filled success" variant="filled" color="" focused  placeholder={100} onChange={val}/>
+<TextField label="Amount to Withdraw" variant="filled" color="" focused  placeholder={100} onChange={val}/>
 </div>
 <br/>
 <Link to="/">
@@ -28,7 +28,7 @@ export default function Withdraw() {
 onClick={(e) => {
 
   dispatch(actioncreator.withdraw(wit))
-  // dispatch(actioncreator.handleWithDraw(wit))
+
 }}
 >
 Withdraw

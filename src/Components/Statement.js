@@ -21,7 +21,7 @@ export default function Statement() {
             <TableRow>
               <TableCell align="center">When</TableCell>
               <TableCell align="center">Type</TableCell>
-              <TableCell align="center">Amount</TableCell>
+              <TableCell align="center">Amount (₹)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

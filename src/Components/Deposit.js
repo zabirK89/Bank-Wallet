@@ -21,7 +21,7 @@ export default function Deposit() {
       <br />
       <div>
         <TextField
-          label="Filled success"
+          label="Amount to deposit"
           variant="filled"
           color=""
           focused
