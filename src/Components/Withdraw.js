@@ -4,7 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { actioncreator } from '../State/Indexa';
 import { useState } from 'react';
-export default function Withdraw() {
+export default function Withdraw( {setOpen }) {
   const [wit, setwit] = useState(0);
   const dispatch = useDispatch();
   const val = (e) => {
@@ -31,6 +31,7 @@ export default function Withdraw() {
           variant="contained"
           style={{ backgroundColor: 'blue', color: 'white' }}
           onClick={(e) => {
+            setOpen(true);
             dispatch(actioncreator.withdraw(wit));
           }}
         >

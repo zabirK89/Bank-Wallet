@@ -8,7 +8,7 @@ import Statement from './Components/Statement';
 import Withdraw from './Components/Withdraw';
 import Deposit from './Components/Deposit';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-export default function App() {
+export default function App(props) {
   const [open, setOpen] = React.useState(false);
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -27,14 +27,14 @@ export default function App() {
           path="/deposit"
           element={<Deposit setOpen={setOpen}></Deposit>}
         />
-        <Route path="/withdraw" element={<Withdraw />} />
+        <Route path="/withdraw" element={<Withdraw setOpen={setOpen} ></Withdraw>} />
         <Route path="/statement" element={<Statement />} />
       </Routes>
       <Snackbar
         open={open}
-        autoHideDuration={600000}
+        autoHideDuration={1000}
         onClose={handleClose}
-        message="Note archived"
+        message='transaction successful'
       />
     </BrowserRouter>
   );

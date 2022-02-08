@@ -48,6 +48,8 @@ export default function Deposit({ setOpen }) {
             setOpen(true);
             dispatch(actioncreator.deposite(dep));
             // dispatch(actioncreator.handleDeposit(dep))
+
+         
           }}
         >
           Deposit
