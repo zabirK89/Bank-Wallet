@@ -1,9 +1,8 @@
 let init = {
   amount: 5000,
-  transactions: [],
+  transactions: [{ amount: 5000, type: 'Initial', date: Date.now() }],
   date: '',
 };
-
 
 const reducer = (State = init, action) => {
   if (action.type === 'deposit') {
@@ -11,13 +10,10 @@ const reducer = (State = init, action) => {
       amount: action.payload,
       type: 'deposit',
       date: Date.now(),
-  
-
     };
     return {
       amount: State.amount + action.payload,
       transactions: [...State.transactions, obj],
-
     };
   } else if (action.type === 'withdraw') {
     let obj = {
@@ -34,11 +30,9 @@ const reducer = (State = init, action) => {
       amount: 5000,
       type: 'initial',
       date: Date.now(),
-    
-    
     };
     return State;
-    transactions: [...State.transactions, obj]
+    transactions: [...State.transactions, obj];
   }
 };
 export default reducer;

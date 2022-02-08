@@ -1,20 +1,18 @@
 import React from 'react';
 
-import { TextField, Button, Snackbar } from '@material-ui/core';
-import { Outlet, Link } from 'react-router-dom';
+import { TextField, Button } from '@material-ui/core';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { store } from '../State/Store';
 import { useDispatch } from 'react-redux';
 import { actioncreator } from '../State/Indexa';
 import { useState } from 'react';
 import { Box } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
-export default function Deposit() {
+export default function Deposit({ setOpen }) {
   const [dep, setdep] = useState(0);
-  const [open, setOpen] = React.useState(false);
-
+  let navigate = useNavigate();
   const val = (e) => {
     setdep(parseFloat(e.target.value));
-  
   };
 
   const handleClose = (event, reason) => {
@@ -49,20 +47,12 @@ export default function Deposit() {
           onClick={() => {
             setOpen(true);
             dispatch(actioncreator.deposite(dep));
-
             // dispatch(actioncreator.handleDeposit(dep))
           }}
         >
           Deposit
         </Button>
       </Link>
-      <Snackbar
-        open={open}
-        autoHideDuration={600000}
-        onClose={handleClose}
-        message="Note archived"
-      />
-
       {/* <Formik initialValues={{ name: 0 }} onSubmit={(value) => { console.log(value); dispatch(actioncreator.deposite(parseFloat(value.name))) }}>
         <Form>
           <Field type="number" name="name" placeholder={100} />

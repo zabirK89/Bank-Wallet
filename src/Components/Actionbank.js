@@ -1,9 +1,18 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { Button,Snackbar  } from '@material-ui/core';
 import { Outlet, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 export default function Actionbank() {
   const account = useSelector((state) => state.account);
+  const [open, setOpen] = React.useState(false);
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <div className="cointainer">
       <br />
@@ -21,6 +30,13 @@ export default function Actionbank() {
         <Link to="/withdraw">
           <Button color="secondary">WITHDRAW</Button>
         </Link>
+
+      <Snackbar
+        open={open}
+        autoHideDuration={600000}
+        onClose={handleClose}
+        message="Note archived"
+      />
       </div>
     </div>
   );
