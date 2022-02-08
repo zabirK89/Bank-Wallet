@@ -11,7 +11,6 @@ import Paper from '@mui/material/Paper';
 import { useSelector } from 'react-redux';
 export default function Statement() {
   const account = useSelector((state) => state.account);
-  console.log(account);
   return (
     <>
       <h1>Account Statement</h1>
@@ -31,7 +30,7 @@ export default function Statement() {
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row" align="center">
-                  {t.amount}
+                  {new Date(t.date).toString()}
                 </TableCell>
                 <TableCell align="center">{t.type}</TableCell>
                 <TableCell component="th" scope="row" align="center">

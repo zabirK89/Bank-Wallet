@@ -1,7 +1,7 @@
 let init = {
   amount: 5000,
   transactions: [],
-  date:""
+  date: '',
 };
 
 const reducer = (State = init, action) => {
@@ -9,6 +9,7 @@ const reducer = (State = init, action) => {
     let obj = {
       amount: action.payload,
       type: 'deposit',
+      date: Date.now(),
     };
     return {
       amount: State.amount + action.payload,
@@ -18,6 +19,7 @@ const reducer = (State = init, action) => {
     let obj = {
       amount: action.payload,
       type: 'withdraw',
+      date: Date.now(),
     };
     return {
       amount: State.amount - action.payload,
