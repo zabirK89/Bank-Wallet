@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 import { actioncreator } from '../State/Indexa';
-export default function Withdraw({ setOpen }) {
+export default function Withdraw(props) {
   let navigate = useNavigate();
   const dispatch = useDispatch();
   return (
@@ -15,7 +15,8 @@ export default function Withdraw({ setOpen }) {
         initialValues={{ name: '100' }}
         onSubmit={(value) => {
           navigate('/');
-          setOpen(true);
+          props.setOpen(true);
+          props.setMessage(`₹ ${value.name} Withdraw successfully`)
           dispatch(actioncreator.withdraw(parseFloat(value.name)));
         }}
       >

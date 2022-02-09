@@ -6,9 +6,12 @@ import Actionbank from './Components/Actionbank';
 import Statement from './Components/Statement';
 import Withdraw from './Components/Withdraw';
 import Deposit from './Components/Deposit';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 export default function App(props) {
   const [open, setOpen] = React.useState(false);
+  const [dep, setdep] = useState(0);
+  const [message, setMessage] = useState("");
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -23,11 +26,11 @@ export default function App(props) {
         <Route path="/" element={<Actionbank />} />
         <Route
           path="/deposit"
-          element={<Deposit setOpen={setOpen}></Deposit>}
+          element={<Deposit setOpen={setOpen}  setMessage={setMessage}></Deposit>}
         />
         <Route
           path="/withdraw"
-          element={<Withdraw setOpen={setOpen}></Withdraw>}
+          element={<Withdraw setOpen={setOpen} setMessage={setMessage}></Withdraw>}
         />
         <Route path="/statement" element={<Statement />} />
       </Routes>
@@ -35,7 +38,7 @@ export default function App(props) {
         open={open}
         autoHideDuration={1000}
         onClose={handleClose}
-        message="transaction successful"
+        message={message}
       />
     </BrowserRouter>
   );
