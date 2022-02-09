@@ -1,7 +1,6 @@
 let init = {
   amount: 5000,
   transactions: [{ amount: 5000, type: 'Initial', date: Date.now() }],
-  date: '',
 };
 
 const reducer = (State = init, action) => {

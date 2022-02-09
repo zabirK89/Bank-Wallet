@@ -9,7 +9,7 @@ export default function Deposit({ setOpen }) {
   return (
     <div className="cont">
       <br />
-      <div> Deposit Form </div>
+      <h4> Deposit Form </h4>
       <br />
       <Formik   initialValues={{ name: "" }} onSubmit={(value) => {  
          navigate('/')
