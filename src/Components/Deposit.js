@@ -21,7 +21,8 @@ export default function Deposit({ setOpen }) {
           <div>
           <label>Enter Amount</label>
           </div>
-          <Field style={{border:"none",padding:'10px'}}  type="number" name="name"  />
+          <Field style={{border:"none",padding:'10px'}}  type="number" name="name"  >
+            </Field>
           <br></br>
      <br/>
           <button  style={{ backgroundColor: 'blue', color: 'white' ,border:"none" ,padding:"9px",borderRadius:"3px" }}>Deposit</button>

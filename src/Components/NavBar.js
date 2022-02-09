@@ -12,7 +12,7 @@ export default function Navbar() {
           <div className="nav">
             <Link to="/">
               <AccountBalanceIcon
-                style={{ color: 'white' }}
+                style={{ color: 'white' ,marginRight:"8px"}}
               ></AccountBalanceIcon>
             </Link>
             My Bank

@@ -14,11 +14,13 @@ export default function Actionbank() {
   };
 
   return (
-    <div className="cont">
+    <div className="cont  ">
       <br />
-      <div>hello user</div>
+      <div className="content">
+      <div>Hello user</div>
       <br />
       <h2> Your balance is ₹{account.amount}</h2>
+      </div>
       <br />
       <div className="btn">
         <Link to="/statement" style={{ textDecoration: 'none' }}>
