@@ -35,11 +35,16 @@ export default function App(props) {
         <Route path="/statement" element={<Statement />} />
       </Routes>
       <Snackbar
+
+anchorOrigin={{  vertical: 'Bottom',
+horizontal: 'left' }}
         open={open}
         autoHideDuration={1000}
         onClose={handleClose}
         message={message}
       />
+
+      
     </BrowserRouter>
   );
 }
