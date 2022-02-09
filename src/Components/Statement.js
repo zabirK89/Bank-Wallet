@@ -41,11 +41,12 @@ export default function Statement() {
           </TableBody>
         </Table>
       </TableContainer>
+      <br/>
       <div>
-        <Link to="/deposit">
+        <Link to="/deposit" style={{ textDecoration: 'none' }}>
           <Button color="secondary">DEPOSIT</Button>
         </Link>
-        <Link to="/withdraw">
+        <Link to="/withdraw" style={{ textDecoration: 'none' }}>
           <Button color="secondary">WITHDRAW</Button>
         </Link>
       </div>

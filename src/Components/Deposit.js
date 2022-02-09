@@ -16,7 +16,9 @@ export default function Deposit({ setOpen }) {
         setOpen(true);
          console.log(value); dispatch(actioncreator.deposite(parseFloat(value.name))) }}>
         <Form>
-          {/* <label>Enter Amount</label> */}
+          <div>
+          <label>Enter Amount</label>
+          </div>
           <Field style={{border:"none",padding:'10px'}}  type="number" name="name"  />
           <br></br>
      <br/>

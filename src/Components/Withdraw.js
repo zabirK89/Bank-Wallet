@@ -11,11 +11,14 @@ export default function Withdraw( {setOpen }) {
       <br />
       <div> Withdraw Form </div>
       <br />
-       <Formik   initialValues={{ name:"" }} onSubmit={(value) => {
+       <Formik   initialValues={{ name:"100" }} onSubmit={(value) => {
             navigate('/')
            setOpen(true);
         dispatch(actioncreator.withdraw(parseFloat(value.name))) }}>
         <Form>
+        <div>
+          <label>Enter Amount</label>
+          </div>
           <Field style={{border:"none",padding:'10px'}}  type="number" name="name" placeholder={100} />
           <br></br>  <br/>
           <button   style={{ backgroundColor: 'blue', color: 'white' ,border:"none" ,padding:"9px",borderRadius:"3px" }}>Withdraw</button>

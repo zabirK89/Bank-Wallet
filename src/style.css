@@ -1,11 +1,11 @@
-h1, p {
-  font-family: Lato;
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .cont{
   background-color:whitesmoke ;
-  padding: 2px;
-  margin: 2px;
+  padding: 6px;
+  margin: 1px;
 }
 .nav{
   display: flex;

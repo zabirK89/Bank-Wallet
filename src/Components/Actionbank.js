@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button,Snackbar  } from '@material-ui/core';
-import { Outlet, Link } from 'react-router-dom';
+import { Button, Snackbar } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 export default function Actionbank() {
   const account = useSelector((state) => state.account);
@@ -18,25 +18,25 @@ export default function Actionbank() {
       <br />
       <div>hello user</div>
       <br />
-      <h2> Your balance is {account.amount}</h2>
+      <h2> Your balance is ₹{account.amount}</h2>
       <br />
       <div className="btn">
-        <Link to="/statement">
-          <Button color="secondary">STATEMENTS</Button>
+        <Link to="/statement" style={{ textDecoration: 'none' }}>
+          <Button  color="secondary">STATEMENTS</Button>
         </Link>
-        <Link to="/deposit">
-          <Button color="secondary">DEPOSIT</Button>
+        <Link to="/deposit" style={{ textDecoration: 'none' }}>
+          <Button color="secondary" >DEPOSIT</Button>
         </Link>
-        <Link to="/withdraw">
+        <Link to="/withdraw" style={{ textDecoration: 'none' }}>
           <Button color="secondary">WITHDRAW</Button>
         </Link>
 
-      <Snackbar
-        open={open}
-        autoHideDuration={600000}
-        onClose={handleClose}
-        message="Note archived"
-      />
+        <Snackbar
+          open={open}
+          autoHideDuration={600000}
+          onClose={handleClose}
+          message="Note archived"
+        />
       </div>
     </div>
   );
