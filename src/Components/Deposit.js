@@ -7,6 +7,8 @@ export default function Deposit({ setOpen }) {
   let navigate = useNavigate();
   const dispatch = useDispatch();
   return (
+
+
     <div className="cont">
       <br />
       <h4> Deposit Form </h4>
