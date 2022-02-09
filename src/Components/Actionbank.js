@@ -18,7 +18,7 @@ export default function Actionbank() {
       <br />
       <div>hello user</div>
       <br />
-      <div> Your balance is {account.amount}</div>
+      <h2> Your balance is {account.amount}</h2>
       <br />
       <div className="btn">
         <Link to="/statement">

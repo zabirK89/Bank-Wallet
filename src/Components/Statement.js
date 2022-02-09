@@ -2,7 +2,7 @@ import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import { Button } from '@material-ui/core';
-import { Outlet, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';

@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
-import { TextField, Button, Snackbar } from '@material-ui/core';
-import { useState } from 'react';
+import {  Snackbar } from '@material-ui/core';
 import NavBar from './Components/NavBar';
 import Actionbank from './Components/Actionbank';
 import Statement from './Components/Statement';
@@ -17,7 +16,6 @@ export default function App(props) {
 
     setOpen(false);
   };
-
   return (
     <BrowserRouter>
       <NavBar />
