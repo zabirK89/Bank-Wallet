@@ -3,7 +3,8 @@
 }
 
 .cont{
-  background-color:whitesmoke ;
+  border:2px solid whitesmoke ;
+  background-color:whitesmoke;
   padding: 6px;
  margin-right:30px ;
  margin-left:30px ;

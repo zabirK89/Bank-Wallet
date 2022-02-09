@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import {  Snackbar } from '@material-ui/core';
+import { Snackbar } from '@material-ui/core';
 import NavBar from './Components/NavBar';
 import Actionbank from './Components/Actionbank';
 import Statement from './Components/Statement';
@@ -25,14 +25,17 @@ export default function App(props) {
           path="/deposit"
           element={<Deposit setOpen={setOpen}></Deposit>}
         />
-        <Route path="/withdraw" element={<Withdraw setOpen={setOpen} ></Withdraw>} />
+        <Route
+          path="/withdraw"
+          element={<Withdraw setOpen={setOpen}></Withdraw>}
+        />
         <Route path="/statement" element={<Statement />} />
       </Routes>
       <Snackbar
         open={open}
         autoHideDuration={1000}
         onClose={handleClose}
-        message='transaction successful'
+        message="transaction successful"
       />
     </BrowserRouter>
   );
