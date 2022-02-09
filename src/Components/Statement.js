@@ -2,7 +2,7 @@ import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import { Button } from '@material-ui/core';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 export default function Statement() {
   const account = useSelector((state) => state.account);
   return (
-<div className="cont"> 
+    <div className="cont">
       <h1>Account Statement</h1>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -24,9 +24,8 @@ export default function Statement() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {account.transactions.map((t, i) => (
+            {account.transactions.map((t) => (
               <TableRow
-                key={i}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row" align="center">
@@ -41,7 +40,7 @@ export default function Statement() {
           </TableBody>
         </Table>
       </TableContainer>
-      <br/>
+      <br />
       <div>
         <Link to="/deposit" style={{ textDecoration: 'none' }}>
           <Button color="secondary">DEPOSIT</Button>
