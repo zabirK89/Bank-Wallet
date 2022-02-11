@@ -10,7 +10,6 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 export default function App(props) {
   const [open, setOpen] = React.useState(false);
-  const [dep, setdep] = useState(0);
   const [message, setMessage] = useState("");
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
